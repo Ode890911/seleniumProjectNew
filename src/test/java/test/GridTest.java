@@ -1,14 +1,18 @@
 package test;
 
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -26,7 +30,7 @@ public class GridTest {
 //		desiredCapabilities.setBrowserName("chrome");
 //		desiredCapabilities.setPlatform(Platform.ANY);
 //
-//		RemoteWebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.171:4455/wd/hub"), desiredCapabilities);
+//		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.171:4455/wd/hub"), desiredCapabilities);
 //		
 		
 		driver = new ChromeDriver();
