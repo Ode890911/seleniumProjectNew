@@ -1,0 +1,7 @@
+utility\ExcelManager.class
+pages\ContactPage.class
+utility\GlobalLibrary.class
+pages\PersonInfoPage.class
+pages\LoginPage.class
+utility\DataBaseManager.class
+utility\PropertiesManager.class
