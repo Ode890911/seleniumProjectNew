@@ -2,12 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-11T11:30:19 EDT" name="Suite" finished-at="2021-05-11T11:30:27 EDT" duration-ms="7401">
+  <suite started-at="2021-05-11T12:49:49 EDT" name="Suite" finished-at="2021-05-11T12:50:01 EDT" duration-ms="11807">
     <groups>
     </groups>
-    <test started-at="2021-05-11T11:30:19 EDT" name="Test" finished-at="2021-05-11T11:30:27 EDT" duration-ms="7401">
+    <test started-at="2021-05-11T12:49:49 EDT" name="Test" finished-at="2021-05-11T12:50:01 EDT" duration-ms="11807">
       <class name="test.GridTest">
-        <test-method signature="accountCreation()[pri:0, instance:test.GridTest@62230c58]" started-at="2021-05-11T11:30:19 EDT" name="accountCreation" finished-at="2021-05-11T11:30:26 EDT" duration-ms="7348" status="PASS">
+        <test-method signature="accountCreation(java.lang.String)[pri:0, instance:test.GridTest@e7edb54]" started-at="2021-05-11T12:49:49 EDT" name="accountCreation" finished-at="2021-05-11T12:50:01 EDT" duration-ms="11759" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountCreation -->

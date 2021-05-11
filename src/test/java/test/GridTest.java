@@ -11,20 +11,23 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class GridTest {
 
 	public String homePageUrl = "http://automationpractice.com/index.php";
 	String accountUrl = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
-	private WebDriver driver;
+	 WebDriver driver = null;
 	//AuthenticationPage nav = new AuthenticationPage();
 
+	@Parameters("Browser")
 	@Test
-	public void accountCreation() throws MalformedURLException {
+	public void accountCreation(String browserName) throws MalformedURLException {
 		
 //		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 //		desiredCapabilities.setBrowserName("chrome");
@@ -32,8 +35,13 @@ public class GridTest {
 //
 //		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.171:4455/wd/hub"), desiredCapabilities);
 //		
+		System.out.println("parameter values is " + browserName);
+		if(browserName.contains("Chrome")) {
+			driver = new ChromeDriver();
+		}else if(browserName.contains("Firefox")) {
+			driver = new FirefoxDriver();
+		}
 		
-		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(homePageUrl);
 		String title = driver.getTitle();
